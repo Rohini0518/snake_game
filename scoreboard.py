@@ -13,10 +13,14 @@ class Scoreboard(Turtle):
         self.scorewrite()    
         self.hideturtle()
        
-    def scorewrite(self):
+    def scorewrite(self):         
         self.write(f"Score :{self.score} ",move=False,align=SCR_ALIGNMENT,font=SCR_FONT)
-   
         
+    def gameover(self):
+        self.goto(0,0)
+        self.write(f"Game Over !! ",move=False,align=SCR_ALIGNMENT,font=SCR_FONT)
+        
+
     def addscore(self):
          self.score+=1
          self.clear()
