@@ -20,3 +20,7 @@ nemo=Fish()
 nemo.swim()
 nemo.breathe()
 print(nemo.num_eyes)
+lst=[5,6,7,3,454,659,98]
+body=lst[1:len(lst)]
+print(body)
+print(lst)
