@@ -14,22 +14,29 @@ class Snake():
         self.create_snakeblocks()
         self.head=self.allturtles[0]
         self.tail=self.allturtles[-1]
+        # self.tail.turtlesize(0.8)
+        
     def create_snakeblocks(self):
         for position in SNK_POSITIONS:
             self.add_snaketail(position)
+            
             print(self.allturtles)
 
     def add_snaketail(self,position):
         # forms three blocks of snake in starting
             tim=turtle.Turtle(shape="square")
-            tim.color("white")
+            tim.color("yellow")
             tim.penup()
+            # tim.shapesize(0.8)
             tim.goto(position)
+            
             # increment-=20
             self.allturtles.append(tim) 
     def extend_snaketail(self):
         # extend snake tail after snake ate food
+       
         self.add_snaketail(self.tail.position())
+      
         
         
     def body_hits(self):

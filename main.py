@@ -1,4 +1,3 @@
-# import turtle
 from turtle import Screen
 import time
 from snake1 import Snake
@@ -22,8 +21,9 @@ screen.onkey(snake.down,"Down")
 screen.onkey(snake.left,"Left")
 screen.onkey(snake.right,"Right")
 
-# food.hideturtle()
 
+
+ 
 is_gameon=True
 while is_gameon:
     screen.update() 
@@ -39,18 +39,8 @@ while is_gameon:
     if snake.body_hits():     
         is_gameon=False
         score.gameover() 
-        
     
-    
-  
-    
-
-
-
-
-
-
-
+    score.highest_score()    
 
 
 
